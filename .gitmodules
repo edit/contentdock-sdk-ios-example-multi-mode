@@ -1,0 +1,3 @@
+[submodule "contentdock-sdk-ios-example-multi-mode/contentdock"]
+	path = contentdock-sdk-ios-example-multi-mode/contentdock
+	url = https://github.com/edit/contentdock-sdk-ios-simulator.git
