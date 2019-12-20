@@ -8,5 +8,7 @@
 	<string>Your contentDock SDK Key for the Multi mode</string>
 	<key>Account</key>
 	<string>Your contentDock Account Webaddress (without .contentdock.com)</string>
+	<key>useLocationService</key>
+	<false/>
 </dict>
 </plist>
