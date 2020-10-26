@@ -51,13 +51,15 @@ class CustomElementsFunctionsSwift: NSObject {
      Calls after device been  rotated.
      */
     @objc class func didRotate() {
-        let orientation = UIApplication.shared.statusBarOrientation
+        let orientation = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.windowScene?.interfaceOrientation
         if orientation == .landscapeLeft || orientation == .landscapeRight {
             //do something cool
         }
     }
     
-    
+    /**
+     App Start
+     */
     @objc class func appStarted() {
         let vc = UIStoryboard(name: "CustomUI", bundle: nil).instantiateViewController(withIdentifier: "VCCustomTabs") as! UITabBarController
         let nc = UINavigationController(rootViewController: vc)

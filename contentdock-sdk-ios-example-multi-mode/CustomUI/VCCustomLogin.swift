@@ -26,8 +26,9 @@ class VCCustomLogin: UIViewController {
     @IBAction func onBtnLogInTapped(_ sender: Any) {
         CDockSDK.login(with: self.tfLogin.text, password: self.tfPass.text, domain: CDockSDK.domain()) {[weak self] isSuccess in
             if isSuccess == false {
-                let alert = UIAlertView(title: "", message: "Login failed", delegate: nil, cancelButtonTitle: "Ok")
-                alert.show()
+                let alert = UIAlertController(title: "Login", message: "Login failed!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self!.present(alert, animated: true);
             }
             self?.refreshState()
         }
