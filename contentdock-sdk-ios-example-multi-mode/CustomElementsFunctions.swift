@@ -51,9 +51,10 @@ class CustomElementsFunctionsSwift: NSObject {
      Calls after device been  rotated.
      */
     @objc class func didRotate() {
-        let orientation = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.windowScene?.interfaceOrientation
-        if orientation == .landscapeLeft || orientation == .landscapeRight {
+        if UIDevice.current.orientation.isLandscape {
             //do something cool
+        } else {
+            //do something others cool
         }
     }
     
